@@ -1,7 +1,7 @@
 [project]
 name = "makefile"
 dynamic = ["version"]
-description = "Add your description here"
+description = "Makes a file with the given filename, encoded in UTF-8"
 authors = [
     { name = "FloatingInt", email = "knutolaihelgesen@gmail.com" }
 ]
