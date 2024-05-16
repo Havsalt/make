@@ -13,8 +13,15 @@ class ParserArguments(argparse.Namespace):
 parser = argparse.ArgumentParser(
     prog="make"
 )
-parser.add_argument("filepath", type=pathlib.Path, help="Filepath to create")
-parser.add_argument("-r", action="store_true", help="Recursively create the folder and file")
+parser.add_argument("filepath",
+                    type=pathlib.Path,
+                    help="Filepath to create")
+parser.add_argument("-v", "--version",
+                    action="version",
+                    version=f"%(prog)s: v{__version__}")
+parser.add_argument("-r",
+                    action="store_true",
+                    help="Recursively create the folder and file")
 
 args = ParserArguments()
 parser.parse_args(namespace=args)
