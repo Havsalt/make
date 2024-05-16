@@ -1,3 +1,3 @@
-# makefile
+# Make command
 
-Describe your project here.
+Makes a file with the given filename, encoded in UTF-8
