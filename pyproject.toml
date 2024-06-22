@@ -19,13 +19,11 @@ managed = true
 dev-dependencies = []
 
 [tool.hatch.version]
-path="script.py"
+path = "makefile/__init__.py"
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-include=[
-    "script.py",
-    "make.bat" # I don't know yet if this is the proper way to include a .bat script
-]
+include = ["makefile/**", "make.bat"]
+exclude = ["makefile/**/__pycache__"]
